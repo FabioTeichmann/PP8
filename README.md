@@ -136,6 +136,14 @@ In this exercise you will:
 1. **How do you pass a file name to a program using the `-i` and `-o` options?**
 2. **What are typical use cases for parameters versus flags? How do the differ from one another?**
 
+1. Einen Dateinamen übergibt man dem Programm über die Kommandozeile mit den Optionen -i und -o, gefolgt vom jeweiligen Dateinamen.
+ -i eingabe.txt bedeutet: Lies Daten aus der Datei eingabe.txt.
+ -o ausgabe.txt bedeutet: Schreibe die Ausgabe in die Datei ausgabe.txt.
+
+2. Flags sind Schalter ohne Wert.
+   Sie geben oft nur an, ob eine Option aktiviert ist oder nicht.
+   Sie stehen alleine, z. B. -v für „verbose mode“ oder -a für „alles anzeigen“.
+   
 ---
 
 ### Task 3: Interactive Input with `scanf` & `fscanf`
@@ -187,7 +195,8 @@ In this exercise you will:
 #### Reflection Question
 
 * **Why is a run-to-completion (batch) approach often preferable to interactive input?**
-
+Für automatisierte, wiederholbare, fehlerfreie Abläufe ist Batch-Verarbeitung oft besser geeignet.
+Interaktive Eingabe ist hilfreich beim Entwickeln, Testen oder für benutzergeführte Tools.
 ---
 
 ### Task 4: Input Redirection from STDIN
@@ -218,6 +227,8 @@ In this exercise you will:
 #### Reflection Question
 
 * **What is the difference between redirecting to stdin and explicitly opening a file with `fopen`?**
+  Die Umleitung auf stdin ist einfach, flexibel und ideal für einfache, skriptfähige Tools.
+  fopen ist besser geeignet, wenn du innerhalb des Programms gezielt mit bestimmten Dateien arbeiten willst.
 
 ---
 
@@ -408,6 +419,9 @@ In this exercise you will:
 #### Reflection Question
 
 * **Explain in your own words what the encryption and decryption processes are doing in both ciphers.**
+
+Die Caesar-Chiffre verschiebt jeden Buchstaben im Alphabet um eine feste Anzahl von Stellen – z. B. wird aus A mit einem Schlüssel von 3 das D. Zum Entschlüsseln wird dieselbe Anzahl in die entgegengesetzte Richtung verschoben.
+Die XOR-Chiffre verknüpft jedes Zeichen mit einem Zahlenwert über eine bitweise XOR-Operation; dieselbe Operation mit dem gleichen Schlüssel stellt den Originaltext wieder her. Beide Verfahren benötigen denselben Schlüssel für Ver- und Entschlüsselung, sind also symmetrisch.
 
 ---
 
